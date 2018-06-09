@@ -8,7 +8,7 @@ if __name__ == '__main__':
 	vhn5019.set_duty(0.1)
 
 
-	while True():
+	while True:
 		vhn5019.drive_motor()
 
 

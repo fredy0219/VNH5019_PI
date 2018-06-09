@@ -44,10 +44,12 @@ class VNH5019_PI():
 		lerp_value = 0.2
 
 		self.current_duty = (lerp_value*self.target_duty) + ((1-lerp_value)*self.current_duty)
-
+		
 		self.pi.hardware_PWM(self.PWM_pin,self.freq,self.current_duty)
 
 	def drive_motor(self):
+
+		print self.target_duty
 
 		if self.target_duty != self.current_duty:
 			self.lerp_to_duty()

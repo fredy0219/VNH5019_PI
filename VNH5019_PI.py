@@ -17,21 +17,21 @@ class VNH5019_PI():
 
 	def stop(self):
 
-		pi.hardware_PWM(self.PWM_pin,self.freq,0)
+		self.pi.hardware_PWM(self.PWM_pin,self.freq,0)
 
-		pi.write(self.INA_pin,0)
-		pi.write(self.INB_pin,0)
+		self.pi.write(self.INA_pin,0)
+		self.pi.write(self.INB_pin,0)
 
 	def set_direction(self, _direction):
 
 		self.direction = _direction
 
 		if _direction == 0:
-			pi.write(self.INA_pin,1)
-			pi.write(self.INB_pin,0)
+			self.pi.write(self.INA_pin,1)
+			self.pi.write(self.INB_pin,0)
 		else:
-			pi.write(self.INA_pin,0)
-			pi.write(self.INB_pin,1)
+			self.pi.write(self.INA_pin,0)
+			self.pi.write(self.INB_pin,1)
 
 
 	def set_duty(self, _duty):

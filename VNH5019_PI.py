@@ -43,7 +43,7 @@ class VNH5019_PI():
 
 		lerp_value = 0.2
 
-		self.current_duty = (lerp_value*target_duty) + ((1-lerp_value)*current_duty)
+		self.current_duty = (lerp_value*self.target_duty) + ((1-lerp_value)*self.current_duty)
 
 	def drive_motor(self):
 

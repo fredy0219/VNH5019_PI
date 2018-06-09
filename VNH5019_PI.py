@@ -47,6 +47,8 @@ class VNH5019_PI():
 
 	def drive_motor(self):
 
+		print self.target_duty
+
 		if self.target_duty != self.current_duty:
 			self.lerp_to_duty()
 

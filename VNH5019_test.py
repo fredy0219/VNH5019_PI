@@ -17,6 +17,11 @@ if __name__ == '__main__':
 	while millis() - start_time < 5000:
 		vhn5019.drive_motor()
 
+	vhn5019.set_duty(0)
+
+	while millis() - start_time < 5000:
+		vhn5019.drive_motor()
+
 	vhn5019.stop()
 
 

@@ -41,7 +41,7 @@ class VNH5019_PI():
 
 	def lerp_to_duty(self):
 
-		lerp_value = 0.2
+		lerp_value = 0.05
 
 		self.current_duty = (lerp_value*self.target_duty) + ((1-lerp_value)*self.current_duty)
 
